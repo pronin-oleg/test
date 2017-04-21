@@ -1,0 +1,92 @@
+list = [1,2,3,4,5]
+
+i = 0
+# Цикл 1 (while)
+  puts 'Цикл 1 (while):'
+  while i < list.size do
+    print "#{ list [i]}\n"
+    i += 1
+  end
+
+  i = 0
+# Цикл 2 (until)
+  puts '\nЦикл 2 (until)'
+  until i == list.size do
+    print "#{list[i]}\n"
+    i += 1
+  end
+
+  i = 0
+# Цикл 3 (while с проверкой в конце)
+  puts '\nЦикл 3 (while с проверкой в конце)'
+  begin
+    print "#{list [i]}\n"
+    i += 1
+  end while i < list.size
+
+  i = 0
+# Цикл 4 (until с проверкой в конце)
+  puts '\n# Цикл 4 (until с проверкой в конце)'
+  begin
+    print "#{list[i]}\n"
+    i += 1
+  end until i == list.size
+
+# Цикл 5 (for)
+puts '\nЦикл 5 (for)'
+  for х in list do # Цикл 5 (for)
+    print "#{х}\n"
+  end
+
+# Цикл 6 (итератор 'each')
+puts '\nЦикл 6 (итератор \'each\')'
+  list.each do |x|
+    print "#{х}\n"
+  end
+
+# Цикл 7 (метод 'loop')
+  i = 0
+  n = list.size-1
+puts '\nЦикл 7 (метод \'loop\')'
+  loop do
+    print "#{list[i]}\n"
+    i += 1
+    break if i > n
+  end
+
+# Цикл 8 (метод 'loop')
+  i = 0
+  n=list. size-1
+puts '\nЦикл 8 (метод \'loop\')'
+  loop do
+    print "#{list[i]}\n"
+    i += 1
+    break unless i <= n
+  end
+
+# Цикл 9 (итератор 'times')
+  n= list.size
+puts 'Цикл 9 (итератор \'times\')'
+  n.times do |i|
+    print "#{list[i]}\n"
+  end
+
+# Цикл 10 (итератор 'upto')
+  n = list.size - 1
+puts 'Цикл 10 (итератор \'upto\')'
+  0.upto(n) do |i|
+    print "#{list[i]}\n"
+  end
+
+# Цикл 11 (for)
+  n=list.size
+puts 'Цикл 11 (for)'
+  for i in 0 .. n do
+    print "#{list[i]}\n"
+  end
+
+# Цикл 12 (итератор 'each_index')
+puts 'Цикл 12 (итератор \'each_index\')'
+  list.each_index do |x|
+      print "#{list[x]}\n"
+  end

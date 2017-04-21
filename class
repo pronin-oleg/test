@@ -1,0 +1,30 @@
+# Создание класса
+class ClassName
+  # ...
+end
+
+# Пример создания простого класса
+class Friend
+  @@myname = "Олега" #переменная класса
+
+  def initialize(name,sex,phone)
+    #переменные экземпляра
+    @name, @sex, @phone = name, sex, phone
+  end
+
+  def hello
+    puts "Привет, я #{@name}."
+  end
+
+  def Friend.our_common_friend # метод класса - -
+    puts "Все мы друзья #{@@myname}."
+  end
+
+end
+
+f1 = Friend.new("Cюзaннa","F","555-0123")
+f2 = Friend.new("Toм","M","555-4567")
+f1.hello # Привет, я Сюзанна.
+f2.hello # Привет, я Том.
+Friend.our_common_friend # Все мы друзья Олега.
+
